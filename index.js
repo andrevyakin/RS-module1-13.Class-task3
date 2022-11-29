@@ -5,7 +5,7 @@ class Dictionary {
     }
 
     add(word, description) {
-        if (!Object.keys(this.words).some(key => key === word))
+        if (!this.words[word])
             this.words[word] = {word, description};
     }
 
@@ -25,7 +25,7 @@ class Dictionary {
 const dictionary = new Dictionary("Толковый словарь");
 dictionary.add("JavaScript", "популярный язык программирования");
 dictionary.add("Веб-разработчик", "Человек, который создает новые сервисы и сайты или поддерживает и дополняет существующие");
-
+dictionary.add("Веб-разработчик", "Проверка метода Add");
 dictionary.remove("JavaScript");
 dictionary.showAllWords();
 
